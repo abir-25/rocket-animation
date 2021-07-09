@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rocket</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes sliding {
+            0% {
+                bottom: 80px;
+            }
+
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left,
+        .right {
+            width: 40%;
+            height: 100vh;
+            background-color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .stage {
+            width: 20%;
+            height: 100vh;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .rocket {
+            width: 250px;
+            position: absolute;
+            animation: sliding 4s ease-in-out infinite;
+            bottom: 80px;
+            left: -12%;
+            z-index: 1;
+            transform: rotateZ(-24deg);
+        }
+
+        .fire {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 12%;
+        }
+
+        @media screen and (max-width:600px) {
+            .rocket {
+                left: -113%;
+            }
+
+            .fire {
+                left: -26%;
+                width: 160px;
+            }
+            img{
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/raiyan.jpeg" alt="">
+        </div>
+        <div class="stage">
+            <img src="images/rocket3.png" alt="" class="rocket rocket1">
+            <img src="images/fire.gif" alt="" class="fire">
+        </div>
+        <div class="right">
+            <img src="images/raiyan2.jpeg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
